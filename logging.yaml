@@ -1,0 +1,54 @@
+version: 1
+disable_existing_loggers: False
+formatters:
+    simple:
+        format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+handlers:
+    console:
+        class: logging.StreamHandler
+        level: DEBUG
+        formatter: simple
+        stream: ext://sys.stdout
+
+loggers:
+    asyncqt:
+      level: INFO
+
+    urllib3:
+      level: INFO
+
+    hbmqtt:
+      level: INFO
+
+    asyncio:
+      level: INFO
+
+    google.auth.transport.requests:
+      level: INFO
+
+    websockets:
+      level: INFO
+
+    __main__:
+      level: INFO
+
+    plugins.Weather.weatherservice:
+      level: INFO
+
+    plugins.WienerLinien.wienerlinienservice:
+      level: INFO
+
+    plugins.Assistant.assistantservice:
+      level: INFO
+
+    plugins.HomeAssistant.homeassistantservice:
+      level: INFO
+
+    plugins.Slack.slackservice:
+      level: INFO
+
+root:
+    level: DEBUG
+    handlers: [console]
+
