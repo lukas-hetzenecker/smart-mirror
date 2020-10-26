@@ -1,4 +1,6 @@
-config/
+config/*
+!config/Secret_example.qml
+
 .idea/
 *.user
 
